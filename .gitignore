@@ -1,0 +1,36 @@
+# virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# datasets / outputs / models
+data/
+dataset/
+datasets/
+outputs/
+results/
+checkpoints/
+models/
+*.npy
+*.npz
+*.csv
+*.xlsx
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.zip
+*.tar
+*.gz
+*.rar
+*.png
+*.dat
+
+# system / editor
+.DS_Store
+.vscode/
+.env
