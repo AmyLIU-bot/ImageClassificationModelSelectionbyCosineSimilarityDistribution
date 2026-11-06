@@ -35,9 +35,9 @@ def data_grouping(csv_file, column, size, num_quantiles):
 
     data = pd.read_csv(csv_file).dropna().drop_duplicates()
 
-    data["length"] = data[column].apply(len)
+    data["length"] = data[column].apply(len)#给数据贴标签，长度
 
-    quantiles = data["length"].quantile(
+    quantiles = data["length"].quantile(#按照长度计算多少个quantile
         [i / num_quantiles for i in range(1, num_quantiles)]
     ).tolist()
 
@@ -69,7 +69,7 @@ def data_grouping(csv_file, column, size, num_quantiles):
 
 def running_sizes(
     csv_file,
-    sizes,
+    sizes,#不同sample size：
     x_column,
     num_repetitions=1,
     num_quantiles=100,
@@ -78,40 +78,41 @@ def running_sizes(
     models=models,
     batch_size=64
 ):
-    results_sizes = {}
+    results_sizes = {}#存不同size的试验结果
 
-    for repetition in range(num_repetitions):
+    for repetition in range(num_repetitions):#不同repeatation,重复实验，解决sampling随机性问题
         print("=================================================")
         print(f"Repetition {repetition + 1}/{num_repetitions}")
 
         random_seed = np.random.randint(1000)
 
-        for size in sizes:
+        for size in sizes:#sample size设置为200,若只有200,仅跑一次200,若samplesize=100,200,500 则跑三次
             print(f"Collecting data for sample size {size} with random seed {random_seed}...")
-
-            grouped_data, n_samples = data_grouping(
+            #data grouping 将初始数据按照sentence长短分称不同组，若sample size等于200,且一共分了100组，则从每组中抽取2个sentence：最后抽取了200个sentence,并且句子长短很平均，
+            #data grouping仅仅只是给每个数据贴标签，每条sentence属于哪个长度大小，以及计算每组应该抽取多少
+            grouped_data, n_samples = data_grouping(#按照不同的samplesize stratified sampling 从不同q中抽sample size 大小的数据数据
                 csv_file,
                 x_column,
                 size,
                 num_quantiles
             )
 
-            result_df = (
+            result_df = (#真正从不同标签中抽取数据
                 grouped_data
                 .groupby("quantiles")
                 .apply(lambda x: x.sample(n_samples, random_state=random_seed))
                 .reset_index(drop=True)
             )
 
-            token_counts = result_df[x_column].str.split().apply(len)
+            token_counts = result_df[x_column].str.split().apply(len)#读取有多少words（除去空格的影响）
 
             print(f"Sample Size: {size}")
             print(f"Actual Sample Size: {len(result_df)}")
-            print(f"Minimum Token Count: {token_counts.min()}")
+            print(f"Minimum Token Count: {token_counts.min()}")#最短的sentence有多少词
             print(f"Average Token Count: {token_counts.mean()}")
-            print(f"Maximum Token Count: {token_counts.max()}")
+            print(f"Maximum Token Count: {token_counts.max()}")#最长的sentence有多少次
 
-            if max_token:
+            if max_token:#决定bert最大的输入长度，如果能达到512，那就512做token的长度，若达不到，就用最长的sentence做token的长度
                 token_length = 512
             else:
                 token_length = token_counts.max()
@@ -123,7 +124,7 @@ def running_sizes(
                 if model not in results_sizes[size]:
                     results_sizes[size][model] = []
 
-                result = cosim_pairs_threads(
+                result = cosim_pairs_threads(#计算结果
                     result_df,
                     x_column,
                     model,
@@ -136,29 +137,29 @@ def running_sizes(
 
     return results_sizes
 
-def compute_embeddings_batch(
-    texts,
-    model,
-    tokenizer,
-    batch_size=32,
+def compute_embeddings_batch(#将文本批量转换成sentence embedding
+    texts,#初始文本数据
+    model,#当前model
+    tokenizer,#负责将text转换为 model input ids
+    batch_size=32,#一次性处理32个sentence,避免运行压力
     max_token=512,
     sentence_padding=True
 ):
-    embeddings = []
+    embeddings = []#储存sentence embedding
 
-    for i in range(0, len(texts), batch_size):
+    for i in range(0, len(texts), batch_size):#每次处理
         batch_texts = texts[i:i + batch_size]
 
         inputs = tokenizer(
             batch_texts,
-            return_tensors="pt",
-            padding=sentence_padding,
+            return_tensors="pt",#pytorch tensor
+            padding=sentence_padding,#短句子补0
             max_length=max_token,
             truncation=True
         )
 
-        with torch.no_grad():
-            batch_outputs = model(**inputs)
+        with torch.no_grad():#只是inference 不训练
+            batch_outputs = model(**inputs)#运行model
 
             # Mean pooling over token embeddings
             batch_embeddings = batch_outputs.last_hidden_state.mean(dim=1)

@@ -1,0 +1,1 @@
+Historical results generated before replacing manual ranks with source-backed MacroF1. Not the current run. Use ../results_nested_f1 and ../gridSearch2_nested.ipynb. Raw recovered repetition CSVs are retained as data provenance.

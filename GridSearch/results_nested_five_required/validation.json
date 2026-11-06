@@ -1,0 +1,6 @@
+{
+  "held_out_target_reversal": "PASS on all 7 datasets",
+  "rows": 49,
+  "target": "MacroF1",
+  "independent_final_test": false
+}

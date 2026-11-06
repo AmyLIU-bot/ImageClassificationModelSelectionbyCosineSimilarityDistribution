@@ -1,0 +1,3661 @@
+Completed cell 0
+Results directory: /home/amyliu/Desktop/GR/Financial/results/uncertainty10_gpu_20261025_153340
+GPU: NVIDIA GeForce RTX 5080
+Completed cell 1
+                                            sentence  label
+0  According to Gran , the company has no plans t...      1
+1  Technopolis plans to develop in stages an area...      1
+2  The international electronic industry company ...      0
+3  With the new production plant the company woul...      2
+4  According to the company 's updated strategy f...      2
+Index(['sentence', 'label'], dtype='str')
+(4846, 2)
+Completed cell 2
+Completed cell 3
+Completed cell 4
+Completed cell 5
+                                            sentence  label  \
+0  According to Gran , the company has no plans t...      1   
+1  Technopolis plans to develop in stages an area...      1   
+2  The international electronic industry company ...      0   
+3  With the new production plant the company woul...      2   
+4  According to the company 's updated strategy f...      2   
+
+                                      clean_sentence  length  
+0  According to Gran the company has no plans to ...     121  
+1  Technopolis plans to develop in stages an area...     186  
+2  The international electronic industry company ...     224  
+3  With the new production plant the company woul...     204  
+4  According to the company s updated strategy fo...     198  
+label
+1    2873
+2    1363
+0     604
+Name: count, dtype: int64
+(4840, 4)
+quantiles
+Q1      51
+Q2      46
+Q3      55
+Q4      43
+Q5      47
+        ..
+Q96     41
+Q97     49
+Q98     50
+Q99     48
+Q100    46
+Name: count, Length: 100, dtype: int64
+                                            sentence  label  \
+0  According to Gran , the company has no plans t...      1   
+1  Technopolis plans to develop in stages an area...      1   
+2  The international electronic industry company ...      0   
+3  With the new production plant the company woul...      2   
+4  According to the company 's updated strategy f...      2   
+
+                                      clean_sentence  length quantiles  
+0  According to Gran the company has no plans to ...     121       Q54  
+1  Technopolis plans to develop in stages an area...     186       Q86  
+2  The international electronic industry company ...     224       Q95  
+3  With the new production plant the company woul...     204       Q91  
+4  According to the company s updated strategy fo...     198       Q89  
+Index(['sentence', 'label', 'clean_sentence', 'length', 'quantiles'], dtype='str')
+(4840, 5)
+Completed cell 6
+Completed cell 7
+Actual Sample Size: 200
+Minimum Token Count: 3
+Average Token Count: 21.605
+Maximum Token Count: 72
+Completed cell 8
+Completed cell 9
+   label labels
+0      1    [1]
+1      1    [1]
+2      0    [0]
+3      2    [2]
+4      2    [2]
+Completed cell 10
+Completed cell 11
+Completed cell 12
+Completed cell 13
+Completed cell 14
+Completed cell 15
+Completed cell 16
+Completed cell 17
+Completed cell 18
+Completed cell 19
+Completed cell 20
+=================================================
+Repetition 1/10
+Repetition seed: 763844502
+Actual Sample Size: 200
+Minimum Token Count: 4
+Average Token Count: 21.125
+Maximum Token Count: 72
+Actual sample size: 200
+Label counts:
+labels
+0     21
+1    150
+2     29
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6342533007902343
+Different mean: 0.6525137990858327
+Mean gap: -0.018260498295598344
+Same eta: -0.09351512047829108
+Different eta: -0.12856525796780813
+Different |eta|: 0.12856525796780813
+Eta gap: 0.03505013748951704
+Chi-square distance: 0.015111687076341297
+Chi-square bootstrap std: 0.0011125406557273567
+Saved 1/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7473029222195006
+Different mean: 0.7602701104858249
+Mean gap: -0.012967188266324299
+Same eta: -0.26435270378438497
+Different eta: -0.22907334417720465
+Different |eta|: 0.22907334417720465
+Eta gap: -0.03527935960718031
+Chi-square distance: 0.013244793964402092
+Chi-square bootstrap std: 0.0010142666115351279
+Saved 2/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8435934664901609
+Different mean: 0.856316963877354
+Mean gap: -0.012723497387193281
+Same eta: -0.31844976147089027
+Different eta: -0.17779591499254654
+Different |eta|: 0.17779591499254654
+Eta gap: -0.1406538464783437
+Chi-square distance: 0.030129684613629942
+Chi-square bootstrap std: 0.001346483942029473
+Saved 3/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7231020715266792
+Different mean: 0.7182100532813722
+Mean gap: 0.004892018245307023
+Same eta: -0.258276888619439
+Different eta: -0.22914762452204948
+Different |eta|: 0.22914762452204948
+Eta gap: -0.02912926409738949
+Chi-square distance: 0.003303068217658784
+Chi-square bootstrap std: 0.0005046050138250508
+Saved 4/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6970328616889699
+Different mean: 0.7153936361327505
+Mean gap: -0.018360774443780606
+Same eta: -0.2754654560396709
+Different eta: -0.16903677482921164
+Different |eta|: 0.16903677482921164
+Eta gap: -0.10642868121045922
+Chi-square distance: 0.01551030371356919
+Chi-square bootstrap std: 0.0011137333899338062
+Saved 5/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8150101590930996
+Different mean: 0.8218468897323321
+Mean gap: -0.006836730639232455
+Same eta: -0.2664903072312151
+Different eta: -0.14755832954253661
+Different |eta|: 0.14755832954253661
+Eta gap: -0.11893197768867847
+Chi-square distance: 0.008507575170301063
+Chi-square bootstrap std: 0.0008110580664154106
+Saved 6/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 11791
+Number of label-set pair types: 3
+Total unique between-label document pairs: 8109
+Same-label target size: 11791
+Different-label pair types: 3
+Base sample per diff-label pair: 3930
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8133574917984518
+Different mean: 0.8245358394672626
+Mean gap: -0.01117834766881069
+Same eta: -0.4358324591751263
+Different eta: -0.2356981771616766
+Different |eta|: 0.2356981771616766
+Eta gap: -0.20013428201344974
+Chi-square distance: 0.014103632507828253
+Chi-square bootstrap std: 0.001007320200393261
+Saved 7/70 model runs
+=================================================
+Repetition 2/10
+Repetition seed: 688012714
+Actual Sample Size: 200
+Minimum Token Count: 3
+Average Token Count: 21.63
+Maximum Token Count: 51
+Actual sample size: 200
+Label counts:
+labels
+0     18
+1    112
+2     70
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6501967577070323
+Different mean: 0.6700675518188289
+Mean gap: -0.01987079411179663
+Same eta: 0.17995700564582806
+Different eta: 0.2973021157854693
+Different |eta|: 0.2973021157854693
+Eta gap: -0.1173451101396412
+Chi-square distance: 0.013529540356716687
+Chi-square bootstrap std: 0.0011169707714089978
+Saved 8/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7422985813507508
+Different mean: 0.7578801631873612
+Mean gap: -0.015581581836610488
+Same eta: -0.2736397218726954
+Different eta: -0.192050977867421
+Different |eta|: 0.192050977867421
+Eta gap: -0.08158874400527442
+Chi-square distance: 0.01381003465611006
+Chi-square bootstrap std: 0.0011136063175389076
+Saved 9/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8428821287275663
+Different mean: 0.8527167077791081
+Mean gap: -0.009834579051541854
+Same eta: -0.317441237094213
+Different eta: -0.11926403920573782
+Different |eta|: 0.11926403920573782
+Eta gap: -0.19817719788847518
+Chi-square distance: 0.013815036092165302
+Chi-square bootstrap std: 0.00114633863080985
+Saved 10/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7204609543784014
+Different mean: 0.7160332765956842
+Mean gap: 0.004427677782717223
+Same eta: -0.09968170741810359
+Different eta: 0.012881503614742308
+Different |eta|: 0.018053126576785324
+Eta gap: -0.1125632110328459
+Chi-square distance: 0.005750681633232951
+Chi-square bootstrap std: 0.0007835439897206992
+Saved 11/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7058485287236549
+Different mean: 0.7137774402407593
+Mean gap: -0.007928911517104452
+Same eta: -0.20889854886620438
+Different eta: -0.3402730191557614
+Different |eta|: 0.3402730191557614
+Eta gap: 0.13137447028955707
+Chi-square distance: 0.011483496727472335
+Chi-square bootstrap std: 0.0010302933467803961
+Saved 12/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8173268409021782
+Different mean: 0.8204634679057083
+Mean gap: -0.003136627003530183
+Same eta: -0.052332329478714
+Different eta: 0.013750827709357321
+Different |eta|: 0.018431805946124764
+Eta gap: -0.06608315718807133
+Chi-square distance: 0.006561197941756658
+Chi-square bootstrap std: 0.0007859086947343243
+Saved 13/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8784
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11116
+Same-label target size: 8784
+Different-label pair types: 3
+Base sample per diff-label pair: 2928
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8152734030289185
+Different mean: 0.8231992373079984
+Mean gap: -0.007925834279079946
+Same eta: -0.25169255463595713
+Different eta: -0.30462462548393276
+Different |eta|: 0.30462462548393276
+Eta gap: 0.05293207084797565
+Chi-square distance: 0.007970350705064681
+Chi-square bootstrap std: 0.0008776633042045151
+Saved 14/70 model runs
+=================================================
+Repetition 3/10
+Repetition seed: 2724066404
+Actual Sample Size: 200
+Minimum Token Count: 5
+Average Token Count: 21.26
+Maximum Token Count: 49
+Actual sample size: 200
+Label counts:
+labels
+0     17
+1    114
+2     69
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6544838558093831
+Different mean: 0.6670479672583786
+Mean gap: -0.012564111448995533
+Same eta: 0.01477358047445976
+Different eta: 0.10081801934058875
+Different |eta|: 0.10081801934058875
+Eta gap: -0.08604443886612899
+Chi-square distance: 0.009288994405102884
+Chi-square bootstrap std: 0.000956044032475661
+Saved 15/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7547554087741725
+Different mean: 0.7613107919024169
+Mean gap: -0.006555383128244428
+Same eta: -0.2806225227992527
+Different eta: -0.22323924794720226
+Different |eta|: 0.22323924794720226
+Eta gap: -0.057383274852050414
+Chi-square distance: 0.004929460535305094
+Chi-square bootstrap std: 0.0006628359887351097
+Saved 16/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8489032287034141
+Different mean: 0.8486957537454366
+Mean gap: 0.00020747495797750283
+Same eta: -0.27683876611206154
+Different eta: -0.12976282132105343
+Different |eta|: 0.12976282132105343
+Eta gap: -0.1470759447910081
+Chi-square distance: 0.004735600753062304
+Chi-square bootstrap std: 0.0006790958424991167
+Saved 17/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7394179070522255
+Different mean: 0.7312146339467237
+Mean gap: 0.008203273105501816
+Same eta: -0.25335806483120715
+Different eta: -0.020637370288858637
+Different |eta|: 0.023761512020422402
+Eta gap: -0.23272069454234853
+Chi-square distance: 0.01141572295082549
+Chi-square bootstrap std: 0.001062058314805035
+Saved 18/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7199823289030832
+Different mean: 0.7211721617574884
+Mean gap: -0.0011898328544051786
+Same eta: -0.1860960581374181
+Different eta: -0.1457579749785192
+Different |eta|: 0.1457579749785192
+Eta gap: -0.040338083158898884
+Chi-square distance: 0.0017012573224900495
+Chi-square bootstrap std: 0.0003877786453684845
+Saved 19/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8214637776547639
+Different mean: 0.8187380857020432
+Mean gap: 0.002725691952720621
+Same eta: -0.10866172624046265
+Different eta: -0.04739646729572746
+Different |eta|: 0.04741977148111458
+Eta gap: -0.061265258944735196
+Chi-square distance: 0.00917621055374487
+Chi-square bootstrap std: 0.0009298653744186498
+Saved 20/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8923
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10977
+Same-label target size: 8923
+Different-label pair types: 3
+Base sample per diff-label pair: 2974
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8217740183211649
+Different mean: 0.8185611378013332
+Mean gap: 0.0032128805198316833
+Same eta: -0.2088502535827539
+Different eta: -0.1286663937778827
+Different |eta|: 0.1286663937778827
+Eta gap: -0.0801838598048712
+Chi-square distance: 0.004781254071189233
+Chi-square bootstrap std: 0.0007276079456106982
+Saved 21/70 model runs
+=================================================
+Repetition 4/10
+Repetition seed: 611609813
+Actual Sample Size: 200
+Minimum Token Count: 3
+Average Token Count: 22.045
+Maximum Token Count: 53
+Actual sample size: 200
+Label counts:
+labels
+0    22
+1    87
+2    91
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6853100002029948
+Different mean: 0.6776666253060639
+Mean gap: 0.007643374896930932
+Same eta: 0.1164736947403831
+Different eta: 0.18046361541981418
+Different |eta|: 0.18046361541981418
+Eta gap: -0.06398992067943109
+Chi-square distance: 0.005831039096067442
+Chi-square bootstrap std: 0.0007739449771146592
+Saved 22/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7689710238823089
+Different mean: 0.764352486934747
+Mean gap: 0.004618536947561804
+Same eta: -0.24740341527510468
+Different eta: -0.2522720665231799
+Different |eta|: 0.2522720665231799
+Eta gap: 0.004868651248075243
+Chi-square distance: 0.006316642121524436
+Chi-square bootstrap std: 0.0007901290750024349
+Saved 23/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8612980689053142
+Different mean: 0.8581621329672195
+Mean gap: 0.00313593593809456
+Same eta: -0.13101620036178482
+Different eta: -0.038548333507996205
+Different |eta|: 0.03891039089788397
+Eta gap: -0.09246786685378862
+Chi-square distance: 0.007257738099005341
+Chi-square bootstrap std: 0.0009156688461093211
+Saved 24/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7419831404030449
+Different mean: 0.7244429662579186
+Mean gap: 0.017540174145126344
+Same eta: -0.05465991734036999
+Different eta: -0.06724214366125787
+Different |eta|: 0.06724214366125787
+Eta gap: 0.012582226320887879
+Chi-square distance: 0.01917895296937912
+Chi-square bootstrap std: 0.001486040201771599
+Saved 25/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7353255236268532
+Different mean: 0.731629670436326
+Mean gap: 0.003695853190527297
+Same eta: -0.17941612525026399
+Different eta: -0.05926520716622812
+Different |eta|: 0.05926520716622812
+Eta gap: -0.12015091808403587
+Chi-square distance: 0.006178027707693083
+Chi-square bootstrap std: 0.0008154828852726159
+Saved 26/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8291902714492635
+Different mean: 0.825065020998888
+Mean gap: 0.004125250450375488
+Same eta: -0.07805654493217815
+Different eta: -0.04235894917237917
+Different |eta|: 0.042375637865216344
+Eta gap: -0.03569759575979897
+Chi-square distance: 0.00415073600780964
+Chi-square bootstrap std: 0.0006796595908010116
+Saved 27/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8067
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11833
+Same-label target size: 8067
+Different-label pair types: 3
+Base sample per diff-label pair: 2689
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8303190250149651
+Different mean: 0.8257950747375509
+Mean gap: 0.004523950277414263
+Same eta: -0.3360514337962952
+Different eta: -0.2527792425165356
+Different |eta|: 0.2527792425165356
+Eta gap: -0.08327219127975959
+Chi-square distance: 0.009693017302067336
+Chi-square bootstrap std: 0.0009820689584454803
+Saved 28/70 model runs
+=================================================
+Repetition 5/10
+Repetition seed: 2676462168
+Actual Sample Size: 200
+Minimum Token Count: 4
+Average Token Count: 21.145
+Maximum Token Count: 47
+Actual sample size: 200
+Label counts:
+labels
+0     27
+1    121
+2     52
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6453701512877861
+Different mean: 0.6631258114539191
+Mean gap: -0.017755660166133003
+Same eta: -0.011687154283889986
+Different eta: 0.03448023939548122
+Different |eta|: 0.03469249416599716
+Eta gap: -0.0461673936793712
+Chi-square distance: 0.013120458089132517
+Chi-square bootstrap std: 0.0011215777514803757
+Saved 29/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7542096723162436
+Different mean: 0.758360022176055
+Mean gap: -0.004150349859811399
+Same eta: -0.3241417155790302
+Different eta: -0.2502333718311959
+Different |eta|: 0.2502333718311959
+Eta gap: -0.0739083437478343
+Chi-square distance: 0.00473873034233606
+Chi-square bootstrap std: 0.000653410404294608
+Saved 30/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8474186285304799
+Different mean: 0.8492467674460136
+Mean gap: -0.0018281389155336536
+Same eta: -0.2272368648326961
+Different eta: -0.13732819708286506
+Different |eta|: 0.13732819708286506
+Eta gap: -0.08990866774983104
+Chi-square distance: 0.00119764544523591
+Chi-square bootstrap std: 0.0002987847513970912
+Saved 31/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.730637771245336
+Different mean: 0.725492543622066
+Mean gap: 0.0051452276232700055
+Same eta: -0.08904934230257833
+Different eta: 0.02588727684401818
+Different |eta|: 0.026464465035244127
+Eta gap: -0.11493661914659652
+Chi-square distance: 0.004531160778777682
+Chi-square bootstrap std: 0.0006965949608387239
+Saved 32/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7021214394370915
+Different mean: 0.713947923918722
+Mean gap: -0.011826484481630328
+Same eta: -0.24370485137297737
+Different eta: -0.23871710900606546
+Different |eta|: 0.23871710900606546
+Eta gap: -0.004987742366911913
+Chi-square distance: 0.015993871886205165
+Chi-square bootstrap std: 0.0012415844268028715
+Saved 33/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8181779579693697
+Different mean: 0.8188533727797976
+Mean gap: -0.0006754148104280087
+Same eta: -0.1346676235204759
+Different eta: -0.0694571314788798
+Different |eta|: 0.0694571314788798
+Eta gap: -0.0652104920415961
+Chi-square distance: 0.0019629550254658856
+Chi-square bootstrap std: 0.0003773897708457414
+Saved 34/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8937
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10963
+Same-label target size: 8937
+Different-label pair types: 3
+Base sample per diff-label pair: 2979
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8159621389264079
+Different mean: 0.8206827133854083
+Mean gap: -0.00472057445900042
+Same eta: -0.35871281016079776
+Different eta: -0.2121089858927304
+Different |eta|: 0.2121089858927304
+Eta gap: -0.14660382426806734
+Chi-square distance: 0.005628345644327072
+Chi-square bootstrap std: 0.0007421974519663178
+Saved 35/70 model runs
+=================================================
+Repetition 6/10
+Repetition seed: 1341955454
+Actual Sample Size: 200
+Minimum Token Count: 6
+Average Token Count: 21.225
+Maximum Token Count: 49
+Actual sample size: 200
+Label counts:
+labels
+0     17
+1    141
+2     42
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6535518456374183
+Different mean: 0.670887153480925
+Mean gap: -0.017335307843506655
+Same eta: 0.03376946475098632
+Different eta: 0.23292731764876085
+Different |eta|: 0.23292731764876085
+Eta gap: -0.1991578528977745
+Chi-square distance: 0.017675467366657864
+Chi-square bootstrap std: 0.0010822389552372323
+Saved 36/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7663749010865445
+Different mean: 0.7663619375041517
+Mean gap: 1.2963582392776508e-05
+Same eta: -0.18179154428871702
+Different eta: -0.11117687586444609
+Different |eta|: 0.11117687586444609
+Eta gap: -0.07061466842427093
+Chi-square distance: 0.005787664043346368
+Chi-square bootstrap std: 0.0007062716657784848
+Saved 37/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8557316040371844
+Different mean: 0.8546076540777148
+Mean gap: 0.0011239499594696482
+Same eta: -0.27178254449390743
+Different eta: 0.011960312483114842
+Different |eta|: 0.015915926525457036
+Eta gap: -0.2837428569770223
+Chi-square distance: 0.012561296270868424
+Chi-square bootstrap std: 0.0009843206927295175
+Saved 38/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7378724776438083
+Different mean: 0.7233121396014233
+Mean gap: 0.014560338042385112
+Same eta: -0.14055671021835292
+Different eta: -0.019807364464411583
+Different |eta|: 0.021542689008573476
+Eta gap: -0.12074934575394133
+Chi-square distance: 0.01600008351253273
+Chi-square bootstrap std: 0.0011439532684427542
+Saved 39/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.717519445226023
+Different mean: 0.7185030583153299
+Mean gap: -0.000983613089306973
+Same eta: -0.25122022769546115
+Different eta: -0.1581543276024804
+Different |eta|: 0.1581543276024804
+Eta gap: -0.09306590009298074
+Chi-square distance: 0.005295912715880634
+Chi-square bootstrap std: 0.0006280576590047425
+Saved 40/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.822360807754325
+Different mean: 0.8208242353899966
+Mean gap: 0.0015365723643283617
+Same eta: -0.17098423159043452
+Different eta: 0.08107671680567478
+Different |eta|: 0.08107671680567478
+Eta gap: -0.25206094839610926
+Chi-square distance: 0.006394747846887993
+Chi-square bootstrap std: 0.0007099598442959568
+Saved 41/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10867
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9033
+Same-label target size: 10867
+Different-label pair types: 3
+Base sample per diff-label pair: 3622
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8244128291791416
+Different mean: 0.8249296574221151
+Mean gap: -0.0005168282429735657
+Same eta: -0.3572855673643645
+Different eta: -0.13066354914555553
+Different |eta|: 0.13066354914555553
+Eta gap: -0.22662201821880898
+Chi-square distance: 0.008236904339855728
+Chi-square bootstrap std: 0.0007986717723361325
+Saved 42/70 model runs
+=================================================
+Repetition 7/10
+Repetition seed: 2740602052
+Actual Sample Size: 200
+Minimum Token Count: 5
+Average Token Count: 21.355
+Maximum Token Count: 50
+Actual sample size: 200
+Label counts:
+labels
+0     20
+1    133
+2     47
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6442592864944539
+Different mean: 0.6585655317655285
+Mean gap: -0.0143062452710746
+Same eta: -0.00859480720405248
+Different eta: 0.12648095238142507
+Different |eta|: 0.12648095238142507
+Eta gap: -0.13507575958547755
+Chi-square distance: 0.013485703202052992
+Chi-square bootstrap std: 0.001043253918211683
+Saved 43/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7499654394190682
+Different mean: 0.7592403852403495
+Mean gap: -0.009274945821281327
+Same eta: -0.2196024808281511
+Different eta: -0.27491845429396505
+Different |eta|: 0.27491845429396505
+Eta gap: 0.05531597346581396
+Chi-square distance: 0.009170279029404028
+Chi-square bootstrap std: 0.0008706277497239994
+Saved 44/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8499702273144486
+Different mean: 0.8491204993767411
+Mean gap: 0.0008497279377076042
+Same eta: -0.37262670985426144
+Different eta: -0.3396356740223578
+Different |eta|: 0.3396356740223578
+Eta gap: -0.03299103583190373
+Chi-square distance: 0.004566173818987902
+Chi-square bootstrap std: 0.0006533012555425746
+Saved 45/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7354168056291019
+Different mean: 0.7252454282644792
+Mean gap: 0.01017137736462281
+Same eta: -0.09875551506693671
+Different eta: -0.08912219075880803
+Different |eta|: 0.08912219075880803
+Eta gap: -0.009633324308128672
+Chi-square distance: 0.011734984742508196
+Chi-square bootstrap std: 0.0010161775033545812
+Saved 46/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7130582636625022
+Different mean: 0.7186380464656695
+Mean gap: -0.005579782803167252
+Same eta: -0.30401694154298037
+Different eta: -0.3000049738430482
+Different |eta|: 0.3000049738430482
+Eta gap: -0.004011967699932106
+Chi-square distance: 0.0029404397434956092
+Chi-square bootstrap std: 0.000508295485697799
+Saved 47/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8193349799762045
+Different mean: 0.8223375781180668
+Mean gap: -0.003002598141862333
+Same eta: -0.10452622957459066
+Different eta: -0.060909800505257475
+Different |eta|: 0.060909800505257475
+Eta gap: -0.04361642906933319
+Chi-square distance: 0.005516963476028374
+Chi-square bootstrap std: 0.0007149606791075822
+Saved 48/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10049
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9851
+Same-label target size: 10049
+Different-label pair types: 3
+Base sample per diff-label pair: 3349
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8225853149126223
+Different mean: 0.8240300593003667
+Mean gap: -0.001444744387744402
+Same eta: -0.3262943636162916
+Different eta: -0.31798536291138896
+Different |eta|: 0.31798536291138896
+Eta gap: -0.008309000704902607
+Chi-square distance: 0.003371447793591695
+Chi-square bootstrap std: 0.0005199807588138737
+Saved 49/70 model runs
+=================================================
+Repetition 8/10
+Repetition seed: 2875423523
+Actual Sample Size: 200
+Minimum Token Count: 4
+Average Token Count: 22.015
+Maximum Token Count: 50
+Actual sample size: 200
+Label counts:
+labels
+0    20
+1    95
+2    85
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6724264184211163
+Different mean: 0.6838417771803971
+Mean gap: -0.011415358759280776
+Same eta: 0.03095461184055274
+Different eta: 0.15585979251731283
+Different |eta|: 0.15585979251731283
+Eta gap: -0.12490518067676012
+Chi-square distance: 0.006278764585071999
+Chi-square bootstrap std: 0.0008038320312023459
+Saved 50/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7697597778242048
+Different mean: 0.7675634635032528
+Mean gap: 0.0021963143209520037
+Same eta: -0.29847983769685327
+Different eta: -0.2961891899154931
+Different |eta|: 0.2961891899154931
+Eta gap: -0.0022906477813601734
+Chi-square distance: 0.006071146665345023
+Chi-square bootstrap std: 0.000784967446428469
+Saved 51/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8594010158730133
+Different mean: 0.8639093682270572
+Mean gap: -0.004508352354043883
+Same eta: -0.23751867146222125
+Different eta: -0.17151174583522502
+Different |eta|: 0.17151174583522502
+Eta gap: -0.06600692562699625
+Chi-square distance: 0.003696374304573473
+Chi-square bootstrap std: 0.0006024247606251967
+Saved 52/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7369790980591238
+Different mean: 0.7269620591454303
+Mean gap: 0.010017038913693444
+Same eta: -0.10574579737698722
+Different eta: -0.0771360692942058
+Different |eta|: 0.0771360692942058
+Eta gap: -0.028609728082781418
+Chi-square distance: 0.007831712400981418
+Chi-square bootstrap std: 0.0009316021746464504
+Saved 53/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7278074048572761
+Different mean: 0.7355540407468592
+Mean gap: -0.007746635889583027
+Same eta: -0.14518024975001706
+Different eta: -0.062404185732199524
+Different |eta|: 0.062404185732199524
+Eta gap: -0.08277606401781754
+Chi-square distance: 0.005264384923232813
+Chi-square bootstrap std: 0.0007397722421924093
+Saved 54/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.827058322306462
+Different mean: 0.8265009548944108
+Mean gap: 0.0005573674120512143
+Same eta: -0.17264607992810396
+Different eta: -0.14304942170983345
+Different |eta|: 0.14304942170983345
+Eta gap: -0.029596658218270528
+Chi-square distance: 0.0035449718484231443
+Chi-square bootstrap std: 0.0006502187025019365
+Saved 55/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 8225
+Number of label-set pair types: 3
+Total unique between-label document pairs: 11675
+Same-label target size: 8225
+Different-label pair types: 3
+Base sample per diff-label pair: 2741
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8249368377804394
+Different mean: 0.8256828478593595
+Mean gap: -0.0007460100789201021
+Same eta: -0.3041288476544858
+Different eta: -0.3107337799093912
+Different |eta|: 0.3107337799093912
+Eta gap: 0.006604932254905434
+Chi-square distance: 0.004054951797546085
+Chi-square bootstrap std: 0.0006715320142381277
+Saved 56/70 model runs
+=================================================
+Repetition 9/10
+Repetition seed: 1312600295
+Actual Sample Size: 200
+Minimum Token Count: 3
+Average Token Count: 21.675
+Maximum Token Count: 48
+Actual sample size: 200
+Label counts:
+labels
+0      4
+1    103
+2     93
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6666072876533148
+Different mean: 0.6491331754770245
+Mean gap: 0.01747411217629019
+Same eta: 0.03790485261178033
+Different eta: -0.11352648379490449
+Different |eta|: 0.11352648379490449
+Eta gap: 0.1514313364066848
+Chi-square distance: 0.02231821973568735
+Chi-square bootstrap std: 0.0013495244429847326
+Saved 57/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7663408290093657
+Different mean: 0.7545139372715338
+Mean gap: 0.011826891737831932
+Same eta: -0.29136818552899346
+Different eta: -0.2003793532822332
+Different |eta|: 0.2003793532822332
+Eta gap: -0.09098883224676027
+Chi-square distance: 0.013856445975403305
+Chi-square bootstrap std: 0.0011010622465130796
+Saved 58/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8529539614418986
+Different mean: 0.8476705346475535
+Mean gap: 0.0052834267943450645
+Same eta: -0.3246253064708139
+Different eta: -0.28826235953791557
+Different |eta|: 0.28826235953791557
+Eta gap: -0.03636294693289827
+Chi-square distance: 0.011956397610688533
+Chi-square bootstrap std: 0.0010465446351226027
+Saved 59/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7394006058637783
+Different mean: 0.7043461437910666
+Mean gap: 0.035054462072711616
+Same eta: -0.20853177654940566
+Different eta: -0.11860658561765197
+Different |eta|: 0.11860658561765197
+Eta gap: -0.08992519093175369
+Chi-square distance: 0.06891554592667919
+Chi-square bootstrap std: 0.0023487603626223628
+Saved 60/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7312515599179895
+Different mean: 0.6988038353281563
+Mean gap: 0.032447724589833256
+Same eta: -0.3170731979098235
+Different eta: -0.5809005060730569
+Different |eta|: 0.5809005060730569
+Eta gap: 0.2638273081632334
+Chi-square distance: 0.040021114978047674
+Chi-square bootstrap std: 0.0017495065939534368
+Saved 61/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8263674883068989
+Different mean: 0.8146018574184137
+Mean gap: 0.01176563088848514
+Same eta: -0.13526309527318572
+Different eta: -0.3568253943712081
+Different |eta|: 0.3568253943712081
+Eta gap: 0.22156229909802236
+Chi-square distance: 0.025528338210206634
+Chi-square bootstrap std: 0.0014577854349098287
+Saved 62/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 9537
+Number of label-set pair types: 3
+Total unique between-label document pairs: 10363
+Same-label target size: 9537
+Different-label pair types: 3
+Base sample per diff-label pair: 3179
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8261639520914984
+Different mean: 0.8117665839059348
+Mean gap: 0.014397368185563518
+Same eta: -0.31701891070563404
+Different eta: -0.2663315130251407
+Different |eta|: 0.2663315130251407
+Eta gap: -0.05068739768049333
+Chi-square distance: 0.03635853630299509
+Chi-square bootstrap std: 0.0017683721794381321
+Saved 63/70 model runs
+=================================================
+Repetition 10/10
+Repetition seed: 351421804
+Actual Sample Size: 200
+Minimum Token Count: 5
+Average Token Count: 21.14
+Maximum Token Count: 49
+Actual sample size: 200
+Label counts:
+labels
+0     12
+1    136
+2     52
+Name: count, dtype: int64
+Number of represented labels: 3
+
+Running model: google-bert/bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: google-bert/bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.6377481248594801
+Different mean: 0.6560062756698678
+Mean gap: -0.018258150810387844
+Same eta: -0.025419729510511507
+Different eta: 0.11552757620321671
+Different |eta|: 0.11552757620321671
+Eta gap: -0.1409473057137282
+Chi-square distance: 0.017619976174815727
+Chi-square bootstrap std: 0.0011100430818170954
+Saved 64/70 model runs
+
+Running model: allenai/scibert_scivocab_uncased
+[1mBertModel LOAD REPORT[0m from: allenai/scibert_scivocab_uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: allenai/scibert_scivocab_uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7472130356753275
+Different mean: 0.745654113618755
+Mean gap: 0.0015589220565724832
+Same eta: -0.19131666807864334
+Different eta: -0.14069849973350915
+Different |eta|: 0.14069849973350915
+Eta gap: -0.05061816834513422
+Chi-square distance: 0.00251589613983937
+Chi-square bootstrap std: 0.00044366915770900644
+Saved 65/70 model runs
+
+Running model: nlpaueb/legal-bert-base-uncased
+[1mBertModel LOAD REPORT[0m from: nlpaueb/legal-bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Model: nlpaueb/legal-bert-base-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8459205079825143
+Different mean: 0.8559232757850281
+Mean gap: -0.010002767802513834
+Same eta: -0.20902112445928914
+Different eta: -0.1179617146863932
+Different |eta|: 0.1179617146863932
+Eta gap: -0.09105940977289594
+Chi-square distance: 0.017563378797636343
+Chi-square bootstrap std: 0.0012013757063338215
+Saved 66/70 model runs
+
+Running model: ahmedrachid/FinancialBERT
+[1mBertModel LOAD REPORT[0m from: ahmedrachid/FinancialBERT
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: ahmedrachid/FinancialBERT
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7215258819764643
+Different mean: 0.7080516052270479
+Mean gap: 0.013474276749416432
+Same eta: -0.16351213795623892
+Different eta: 0.05196824337820858
+Different |eta|: 0.051978948252656504
+Eta gap: -0.21548038133444752
+Chi-square distance: 0.015275600822238887
+Chi-square bootstrap std: 0.0010929687329966937
+Saved 67/70 model runs
+
+Running model: Lianglab/PharmBERT-uncased
+[1mBertModel LOAD REPORT[0m from: Lianglab/PharmBERT-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: Lianglab/PharmBERT-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.7031879180868241
+Different mean: 0.7148933962067076
+Mean gap: -0.011705478119883459
+Same eta: -0.15390166952115758
+Different eta: -0.008302907566814772
+Different |eta|: 0.013058748833276871
+Eta gap: -0.14559876195434282
+Chi-square distance: 0.010478821296418514
+Chi-square bootstrap std: 0.0008860081592686639
+Saved 68/70 model runs
+
+Running model: recobo/agriculture-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/agriculture-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/agriculture-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8165626688252513
+Different mean: 0.814505094300272
+Mean gap: 0.0020575745249793186
+Same eta: -0.1016351718469136
+Different eta: -0.0085636475807901
+Different |eta|: 0.013076258336046791
+Eta gap: -0.0930715242661235
+Chi-square distance: 0.003439477012244891
+Chi-square bootstrap std: 0.0005558274687770353
+Saved 69/70 model runs
+
+Running model: recobo/chemical-bert-uncased
+[1mBertModel LOAD REPORT[0m from: recobo/chemical-bert-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+bert.embeddings.position_ids               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+pooler.dense.weight                        | MISSING    | 
+pooler.dense.bias                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model: recobo/chemical-bert-uncased
+Device: cuda
+Embedding shape: (200, 768)
+Total unique within-label document pairs: 10572
+Number of label-set pair types: 3
+Total unique between-label document pairs: 9328
+Same-label target size: 10572
+Different-label pair types: 3
+Base sample per diff-label pair: 3524
+Bootstrap 100/1000
+Bootstrap 200/1000
+Bootstrap 300/1000
+Bootstrap 400/1000
+Bootstrap 500/1000
+Bootstrap 600/1000
+Bootstrap 700/1000
+Bootstrap 800/1000
+Bootstrap 900/1000
+Bootstrap 1000/1000
+
+Summary:
+Same mean: 0.8158042895672135
+Different mean: 0.8189365966103483
+Mean gap: -0.003132307043134873
+Same eta: -0.2885456364703022
+Different eta: -0.16962910533480505
+Different |eta|: 0.16962910533480505
+Eta gap: -0.11891653113549713
+Chi-square distance: 0.005041178862083096
+Chi-square bootstrap std: 0.000616259542948618
+Saved 70/70 model runs
+Completed cell 21
+Completed cell 22
+Completed cell 23
+Completed cell 24
+Selected models:
+Rank 1: recobo/agriculture-bert-uncased
+Rank 2: google-bert/bert-base-uncased
+Rank 4: allenai/scibert_scivocab_uncased
+Rank 6: recobo/chemical-bert-uncased
+Rank 7: nlpaueb/legal-bert-base-uncased
+Completed cell 25
+Completed cell 26
+Completed cell 27
+Display range: 0.39448331451416013 0.9561905800700209
+Completed cell 28
+/tmp/ipykernel_3682583/936896302.py:91: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Completed cell 29
+/tmp/ipykernel_3682583/1764493504.py:91: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Completed cell 30
+COMPLETED: all 10 repetitions and notebook cells.

@@ -1,0 +1,14 @@
+{
+  "Family": "five_required",
+  "Standardization": "zscore",
+  "InnerSpearman": 0.4693877551020408,
+  "Coefficients": {
+    "SameMean": -0.3,
+    "DffMean": 0.2,
+    "SameAbsEta": 0.1,
+    "DiffAbsEta": -0.3,
+    "Chi2Distance": 0.1
+  },
+  "FullFitSpearman": 0.6020408163265305,
+  "Interpretation": "ranking score, not predicted F1; full-data exploratory fit"
+}

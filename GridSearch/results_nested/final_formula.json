@@ -1,0 +1,15 @@
+{
+  "status": "exploratory full-data fit, not independent validation",
+  "standardization": "robust",
+  "family": "up_to_five",
+  "coefficients": {
+    "SameMean": 0.2,
+    "DffMean": -0.2,
+    "SameAbsEta": 0.1,
+    "DiffAbsEta": -0.3,
+    "Chi2Distance": 0.2
+  },
+  "FullFitSpearman": 0.6377551020408163,
+  "grid_step": 0.1,
+  "coefficient_candidates": 14002
+}

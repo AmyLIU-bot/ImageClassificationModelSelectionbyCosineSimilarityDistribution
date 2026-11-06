@@ -1,0 +1,14 @@
+{
+  "Family": "up_to_two",
+  "Standardization": "robust",
+  "InnerSpearman": 0.42346938775510207,
+  "Coefficients": {
+    "SameMean": 0.0,
+    "DffMean": 0.0,
+    "SameAbsEta": 0.0,
+    "DiffAbsEta": -0.6,
+    "Chi2Distance": 0.4
+  },
+  "FullFitSpearman": 0.576530612244898,
+  "Interpretation": "ranking score, not predicted F1; full-data exploratory fit"
+}

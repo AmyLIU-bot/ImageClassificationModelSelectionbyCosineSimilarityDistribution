@@ -1,0 +1,85 @@
+Completed cell 0
+Completed cell 1
+Completed cell 2
+Completed cell 3
+Completed cell 4
+Completed cell 5
+Completed cell 6
+Completed cell 7
+Completed cell 8
+Completed cell 9
+Completed cell 10
+Completed cell 11
+Completed cell 12
+Completed cell 13
+Completed cell 14
+Completed cell 15
+Completed cell 16
+Completed cell 17
+Completed cell 18
+Completed cell 19
+Completed cell 20
+Traceback (most recent call last):
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 657, in async_setup_kernel
+    raise e
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 654, in async_setup_kernel
+    yield
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 1009, in async_execute_cell
+    raise DeadKernelError("Kernel died") from None
+nbclient.exceptions.DeadKernelError: Kernel died
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/run_financial_uncertainty10.py", line 19, in <module>
+    client.execute()
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 693, in async_execute
+    async with self.async_setup_kernel(**kwargs):
+  File "/usr/lib/python3.12/contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(value)
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 660, in async_setup_kernel
+    await self._async_cleanup_kernel()
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 504, in _async_cleanup_kernel
+    assert self.km is not None
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 657, in async_setup_kernel
+    raise e
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 654, in async_setup_kernel
+    yield
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 1009, in async_execute_cell
+    raise DeadKernelError("Kernel died") from None
+nbclient.exceptions.DeadKernelError: Kernel died
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/run_financial_uncertainty10.py", line 19, in <module>
+    client.execute()
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 693, in async_execute
+    async with self.async_setup_kernel(**kwargs):
+  File "/usr/lib/python3.12/contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(value)
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 660, in async_setup_kernel
+    await self._async_cleanup_kernel()
+  File "/home/amyliu/Desktop/GR/.venv/lib/python3.12/site-packages/nbclient/client.py", line 504, in _async_cleanup_kernel
+    assert self.km is not None
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError

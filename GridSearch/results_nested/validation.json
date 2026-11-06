@@ -1,0 +1,8 @@
+{
+  "outer_label_reversal_test": "PASS for all seven held-out datasets",
+  "visible_notebook_summary_value_checks": 105,
+  "arxiv_saved_csv_crosscheck": "PASS at 1e-12",
+  "required_rows": 49,
+  "required_five_metrics_complete": true,
+  "warning": "All seven datasets previously inspected; nested results are exploratory, not a pristine external test."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "dataset": "ACGNews",
+    "notebook": "ACGNews/rankPredict.ipynb",
+    "notebook_sha256": "888ee143f3cd6d4966fd57624fa61ced9a2b04e64190a5063ce5aa35231172bc",
+    "ranking": "ag_news_5fold/ag_news_real_model_ranking.csv",
+    "rows": 21,
+    "unavailable_columns": [
+      "AbsMeanGap",
+      "AbsEtaGap"
+    ],
+    "note": "Means recovered from full precision per-model print logs; not rounded table cells. Absolute bootstrap gaps not inferred."
+  },
+  {
+    "dataset": "arXiv",
+    "notebook": "arXiv/rankPredict.ipynb",
+    "notebook_sha256": "712784ae37dd3633a79b34666686c45bca43d0df7df24e1e1154f5f5b2c21c95",
+    "ranking": "arxiv_9class_5fold/arxiv_9class_real_model_ranking.csv",
+    "rows": 21,
+    "unavailable_columns": [
+      "AbsMeanGap",
+      "AbsEtaGap"
+    ],
+    "note": "Means recovered from full precision per-model print logs; not rounded table cells. Absolute bootstrap gaps not inferred."
+  },
+  {
+    "dataset": "Rheology",
+    "notebook": "Rheology/rankPredict.ipynb",
+    "notebook_sha256": "bbc4a1ec02b644eb4b82942918fd43afb735fe6d0ca927a4b326f2c555d1db0d",
+    "ranking": "rheology_5fold/rheology_real_model_ranking.csv",
+    "rows": 21,
+    "unavailable_columns": [
+      "AbsMeanGap",
+      "AbsEtaGap"
+    ],
+    "note": "Means recovered from full precision per-model print logs; not rounded table cells. Absolute bootstrap gaps not inferred."
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "target": "MacroF1",
+  "absolute_gap_definition": "abs(stored signed gap), NOT mean(abs(bootstrap gap))",
+  "sources": [
+    {
+      "dataset": "FinancialData",
+      "source": "AgusDatasetBasedCompare/financial_3epochAmy.ipynb",
+      "cell_index": 14,
+      "aggregation": "five-fold mean macro F1",
+      "precision": "saved printed summary: 6 decimal places; original full precision unavailable"
+    },
+    {
+      "dataset": "EnvData",
+      "source": "fullFIneTuningResults/envData_3epochAmy.ipynb",
+      "cell_index": 6,
+      "aggregation": "five-fold mean macro F1",
+      "precision": "saved printed summary: 6 decimal places; original full precision unavailable"
+    },
+    {
+      "dataset": "Ohsumed",
+      "source": "Ohsumed/results/ohsumed_5fold/ohsumed_5fold_results.csv",
+      "aggregation": "five-fold mean macro F1",
+      "precision": "full precision saved CSV"
+    },
+    {
+      "dataset": "ACGNews",
+      "source": "ACGNews/results/ag_news_5fold/ag_news_5fold_results.csv",
+      "aggregation": "five-fold mean macro F1",
+      "precision": "full precision saved CSV"
+    },
+    {
+      "dataset": "arXiv",
+      "source": "arXiv/results/arxiv_9class_5fold/arxiv_9class_5fold_results.csv",
+      "aggregation": "five-fold mean macro F1",
+      "precision": "full precision saved CSV"
+    },
+    {
+      "dataset": "Rheology",
+      "source": "Rheology/results/rheology_5fold/rheology_5fold_results.csv",
+      "aggregation": "five-fold mean macro F1",
+      "precision": "full precision saved CSV"
+    },
+    {
+      "dataset": "ECtHR",
+      "source": "ECtHR/real_ranking_raw_results.csv",
+      "aggregation": "three-seed mean, NOT five folds macro F1",
+      "precision": "full precision saved CSV"
+    }
+  ]
+}

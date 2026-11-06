@@ -1,0 +1,15 @@
+ACGNews {'family': 'up_to_five', 'method': 'zscore', 'inner_rho': 0.41071428571428575}
+ECtHR {'family': 'up_to_five', 'method': 'zscore', 'inner_rho': 0.5714285714285713}
+EnvData {'family': 'up_to_five', 'method': 'rank', 'inner_rho': 0.4226190476190476}
+FinancialData {'family': 'up_to_five', 'method': 'robust', 'inner_rho': 0.6488095238095237}
+Ohsumed {'family': 'up_to_five', 'method': 'robust', 'inner_rho': 0.36904761904761907}
+Rheology {'family': 'up_to_five', 'method': 'rank', 'inner_rho': 0.38697215856770817}
+arXiv {'family': 'up_to_two', 'method': 'robust', 'inner_rho': 0.3988095238095238}
+           TestSpearman           TestKendall           TestRankMAE           Top1TrueRank           Top3ContainsBest          
+                   mean       std        mean       std        mean       std         mean       std             mean       std
+Procedure                                                                                                                      
+selected       0.332048  0.416340    0.245234  0.352375    1.816327  0.693577     2.857143  2.267787         0.714286  0.487950
+single         0.336735  0.425513    0.251701  0.358162    1.836735  0.635827     2.857143  2.267787         0.714286  0.487950
+up_to_five     0.342252  0.425991    0.258839  0.362331    1.816327  0.693577     2.857143  2.267787         0.714286  0.487950
+up_to_two      0.341837  0.454969    0.251701  0.378678    1.714286  0.737711     2.285714  2.138090         0.571429  0.534522
+Final candidate: {'status': 'exploratory full-data fit, not independent validation', 'standardization': 'robust', 'family': 'up_to_five', 'coefficients': {'SameMean': 0.2, 'DffMean': -0.2, 'SameAbsEta': 0.1, 'DiffAbsEta': -0.3, 'Chi2Distance': 0.2}, 'FullFitSpearman': 0.6377551020408163, 'grid_step': 0.1, 'coefficient_candidates': 14002}

@@ -1,0 +1,6 @@
+{
+  "rows": 49,
+  "feature_checks": 105,
+  "corrections": [],
+  "absolute_gap_definition": "abs(stored signed gap)"
+}
